@@ -8,6 +8,18 @@ body {
 
 ul {
   list-style-type: none;
+  margin-block: 0;
+  padding-left: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0;
 }
 
 a {
@@ -23,6 +35,12 @@ button {
   font-family: inherit;
 }
 
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,6 +53,17 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  /* max-width: 1166px;
+  width: 100%; */
+  width: 1166px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* padding-inline: 15px;
+  margin-inline: auto; */
 }
 
 .section-title {
@@ -52,6 +81,10 @@ button {
 }
 
 /*------------- header-------------- */
+
+.header {
+  padding-block: 28px;
+}
 
 .header-logo {
   font-weight: 700;
@@ -94,6 +127,9 @@ button {
 
 .hero {
   background-color: #1e1823;
+  padding: 381px 40px 40px 40px;
+  border-radius: 30px;
+  margin-bottom: 72px;
 }
 
 .hero-title {
@@ -102,6 +138,8 @@ button {
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+  max-width: 484px;
+  margin-bottom: 32px;
 }
 
 .hero-button {
@@ -128,6 +166,7 @@ button {
 
 .features {
   background-color: #1e1823;
+  padding-block: 50px;
 }
 
 .features-list {
@@ -140,6 +179,7 @@ button {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
 
 .features-item-text {
@@ -150,7 +190,9 @@ button {
 
 /*------------- taste-------------- */
 
-.taste p {
+.taste {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .taste-title {
