@@ -150,12 +150,29 @@ img {
   color: #fd9222;
 } */
 
+.header-soc-icon {
+  fill: transparent;
+  stroke: #111;
+}
+
+/* .header-soc-icon {
+  fill: #111;
+} */
+
 /*------------- hero-------------- */
 
 .hero {
   background-color: #1e1823;
-
+  background-image:
+    linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)),
+    url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 30px;
+
+  max-width: 1200px;
+  margin: 0 auto;
   margin-bottom: 72px;
 }
 
@@ -226,7 +243,24 @@ img {
 
 .features-item {
   width: calc((100% - 70px * 2) / 3);
+  position: relative;
 }
+
+.features-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  content: '';
+  width: 1px;
+  height: 124px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+/* .features-item:last-child::after {
+  display: none;
+} */
 
 .features-subtitle {
   font-weight: 600;
@@ -302,6 +336,20 @@ img {
 }
 
 .made-title {
+  margin-bottom: 50px;
+}
+
+.made-title::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-image: url(../img/love-img-2.png);
+  background-size: cover;
+}
+
+.made-title::after {
+  content: '!!!!';
 }
 
 .made-image {
