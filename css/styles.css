@@ -205,6 +205,23 @@ img {
   padding: 14px 40px;
   background-color: #fd9222;
   border: none;
+  /* transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 1s; */
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1s,
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1s;
+  /* transform: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1s; */
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1s,
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1s;
 }
 
 .hero-button-link {
@@ -312,10 +329,15 @@ img {
 }
 
 .taste-item {
-  padding: 28px 32px;
+  /* padding: 28px 32px; */
   border: 1px solid #fd9222;
   border-radius: 15px;
   width: calc((100% - 19px * 3) / 4);
+}
+
+.taste-item-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .taste-image {
@@ -328,6 +350,29 @@ img {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111;
+  padding: 36px 32px 28px 32px;
+}
+
+.taste-item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: #111;
+  background-color: #fd9222;
+  border-radius: 15px;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.taste-item:hover .taste-item-text {
+  transform: translateY(0);
+
 }
 
 /*------------- made-------------- */
